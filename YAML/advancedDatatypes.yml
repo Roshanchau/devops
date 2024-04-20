@@ -1,0 +1,91 @@
+# sequence
+student: !!seq
+  - marks
+  - name
+  - age
+
+# like this also 
+cities: [new delhi, mumbai]
+
+# some of the keys of the seq will be empty known as
+# sparse seq
+sparse seq:
+  - hey
+  - how
+  -
+  - Null
+  - what
+
+#nested sequence
+-
+  - mango
+  - apple
+  - banana
+- 
+  - orange
+  - grapes
+  - kiwi
+
+# key: value pairs are called maps
+!!maps
+
+# nested mappings: map within an map
+name: roshan chaudhary
+role: 
+  age: 77
+  job: student
+
+#same as
+name: roshan chaudhary
+role: {age: 77, job: student}
+
+#pairs: keys may have duplicate values
+#!!pairs
+pair examples: !!pairs
+  - job: student
+  - job: teacher
+
+# same as 
+pair examples: !!pairs [job: student, job: teacher]
+# this will be an array of hashtables
+
+# !!set will allwo you to have unique values
+names: !!set
+ ? kunal
+ ? roshan
+ ? brook
+
+# dictionary !!omap
+people: !!omap
+  - kunal: 
+      name: Roshan Chaudhary
+      age: 22
+      height: 634
+  - roshan:
+      name: Kunal Chaudhary
+      age: 23
+      height: 634
+
+# reusing some properties using anchors
+likings: &likes
+  fav fruit: mango
+  dislikes: grapes
+
+person1:
+  name: Roshan Chaudhary
+  <<: *likes
+
+person2:
+  name: Kunal Chaudhary
+  <<: *likes
+  dislikes: berries # this will override the dislikes key
+
+# this will look like 
+person2:
+  name: Kunal Chaudhary
+  fav fruit: mango
+  dislikes: berries
+
+person3:
+  name: Brook Chaudhary
+  <<: *likes

@@ -1,0 +1,47 @@
+# string varibales
+myself: Roshan Chaudhary
+fruit: "apple"
+job: 'swe'
+
+# writing a sentence in different lines
+bio: |
+I am a software engineer
+I am
+
+# wrie a single line in multiple lines
+message: >
+this will 
+all be 
+in a single line
+
+# same as
+message: !!str this will all be in a single line
+
+number:  5634
+marks: 86.5
+booleanValue: !!bool No # n , N ,false , False , FALSE , no , No , NO 
+# same for true->true , True , TRUE , y , Y , yes , Yes , YES
+
+# specify the type
+zero: !!int 0
+positiveNum: !!int 45
+negativeNum: !!int -45
+binaryNum: !!int 0b1010
+octalNum: !!int 0637
+hexa: !!int 0x35
+commaValue: !!int +540_000 #540,000
+exponential numbers: 6.99E
+
+# floating point numbers
+marks: !!float 45.68
+infinite: !!float .inf 
+not a num: .nan 
+
+# null
+surname: !!null Null #or null NULL ~
+~: this is a null key
+
+# dates and time
+date: !!timestamp 2002-12-14
+nepal time: 2002-12-14T21:59:43.10-05:00 +6:20
+no time zone: 2002-12-14T21:59:43.10
