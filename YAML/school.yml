@@ -1,0 +1,14 @@
+---
+school:
+  - name: "GNS"
+    principal: "Mr. Sharma"
+    students:
+      - name: "Roshan"
+        age: 22
+        marks: 90
+      - name: "Kunal"
+        age: 23
+        marks: 95
+      - name: "Brook"
+        age: 24
+        marks: 100
